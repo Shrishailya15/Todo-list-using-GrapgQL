@@ -13,5 +13,5 @@ The backend is powered by **Node.js** with **Apollo Server**, and the frontend i
 ### 🔧 Tech Stack
 - **Frontend:** React, Apollo Client
 - **Backend:** Node.js, GraphQL (Apollo Server)
-- **Database:** Sql Sever
+- **Database:** Sql Server
 - **ORM:** TypeORM
