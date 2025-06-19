@@ -1,0 +1,35 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserEntity {
+  id: String!
+  name: String!
+  email: String!
+  todos: [TaskEntity!]
+  created_at: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type TaskEntity {
+  id: ID!
+  todo: String!
+  completed: Boolean!
+  date: DateTime!
+}
+
+type Query {
+  getTasks: [TaskEntity!]!
+}
+
+type Mutation {
+  createTask(todo: String!): String!
+  updateTaskStatus(id: String!, completed: Boolean!): String!
+  deleteTask(id: String!): String!
+  signup(name: String!, email: String!, password: String!): UserEntity!
+  signin(email: String!, password: String!): String!
+}
